@@ -1,0 +1,906 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology/"
+     xml:base="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:witcher_3_ontology="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled -->
+
+    <owl:AnnotationProperty rdf:about="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Allies -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Allies">
+        <owl:equivalentProperty rdf:resource="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#FromOneSideOfTheContinent"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Creature"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Creature"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#CanBeIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#CanBeIn">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Creature"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Town"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Compatriots -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Compatriots">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#FromOneSideOfTheContinent"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Creature"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Creature"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#CountryFor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#CountryFor">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#LiveIn"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#FromOneSideOfTheContinent -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#FromOneSideOfTheContinent">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#LiveIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#LiveIn">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Creature"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Country"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#LocatedIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#LocatedIn">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Creature"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Creature"/>
+        <owl:propertyDisjointWith rdf:resource="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Subject"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#PlacedAt -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#PlacedAt">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#SideForCountry"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Country"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Location"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#SideForCountry -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#SideForCountry"/>
+    
+
+
+    <!-- http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Subject -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Subject">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Compatriots"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Creature"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Creature"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#lovers -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#lovers"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Commander -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Commander">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Military"/>
+        <rdfs:label>Командир</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Country -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Country">
+        <rdfs:label>Страна</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Creature -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Creature">
+        <rdfs:label>Живое создание</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Default -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Default">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Role"/>
+        <rdfs:label>Обычная</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Dwarf -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Dwarf">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Creature"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Fighter"/>
+        <rdfs:label>Краснолюд</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Elf -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Elf">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Creature"/>
+        <rdfs:label>Эльф</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Enchantress -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Enchantress">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Magician"/>
+        <rdfs:label>Чародейка</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Fighter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Fighter">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Default"/>
+        <rdfs:label>Боец</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Human -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Human">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Creature"/>
+        <rdfs:label>Человек</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Imperor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Imperor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Leader"/>
+        <rdfs:label>Император</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#King -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#King">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Leader"/>
+        <rdfs:label>Король</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Leader -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Leader">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Default"/>
+        <rdfs:label>Правитель</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Location -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Location">
+        <rdfs:label>Сторона Света</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Magician -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Magician">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Role"/>
+        <rdfs:label>Маг</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Military -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Military">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Fighter"/>
+        <rdfs:label>Военный</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Mutant -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Mutant">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Creature"/>
+        <rdfs:label>Мутант</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Role -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Role">
+        <rdfs:label>Роль</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#SpecificPlaces -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#SpecificPlaces">
+        <rdfs:label>Особенное место</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Spy -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Spy">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Military"/>
+        <rdfs:label>Шпион</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Town -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Town">
+        <rdfs:label>Город</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Witcher -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Witcher">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Fighter"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Magician"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Mutant"/>
+        <rdfs:label>Ведьмак</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Аретуза -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Аретуза">
+        <rdf:type rdf:resource="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#SpecificPlaces"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Верон_Роше -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Верон_Роше">
+        <rdf:type rdf:resource="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Commander"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Human"/>
+        <witcher_3_ontology:LiveIn rdf:resource="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Темерия"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Весемир -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Весемир">
+        <rdf:type rdf:resource="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Witcher"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Визимир -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Визимир">
+        <rdf:type rdf:resource="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Human"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#King"/>
+        <witcher_3_ontology:LiveIn rdf:resource="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Редания"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Геральт_из_Ривии -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Геральт_из_Ривии">
+        <rdf:type rdf:resource="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Witcher"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Дийкстра -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Дийкстра">
+        <rdf:type rdf:resource="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Human"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Spy"/>
+        <witcher_3_ontology:LiveIn rdf:resource="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Редания"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Золтан -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Золтан">
+        <rdf:type rdf:resource="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Dwarf"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Йеннифер -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Йеннифер">
+        <rdf:type rdf:resource="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Elf"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Enchantress"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Human"/>
+        <witcher_3_ontology:LiveIn rdf:resource="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Каэдвен"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Кагыр -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Кагыр">
+        <rdf:type rdf:resource="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Commander"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Human"/>
+        <witcher_3_ontology:LiveIn rdf:resource="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Нильфгаард"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Каэдвен -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Каэдвен">
+        <rdf:type rdf:resource="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Country"/>
+        <witcher_3_ontology:PlacedAt rdf:resource="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Север"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Кейра_Мец -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Кейра_Мец">
+        <rdf:type rdf:resource="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Enchantress"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Human"/>
+        <witcher_3_ontology:LiveIn rdf:resource="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Темерия"/>
+        <witcher_3_ontology:LocatedIn rdf:resource="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Аретуза"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Ламберт -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Ламберт">
+        <rdf:type rdf:resource="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Witcher"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Маргарита_Ло_Антиль -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Маргарита_Ло_Антиль">
+        <rdf:type rdf:resource="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Enchantress"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Human"/>
+        <witcher_3_ontology:LiveIn rdf:resource="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Темерия"/>
+        <witcher_3_ontology:LocatedIn rdf:resource="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Аретуза"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Нильфгаард -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Нильфгаард">
+        <rdf:type rdf:resource="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Country"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Новиград -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Новиград">
+        <rdf:type rdf:resource="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Town"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Редания -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Редания">
+        <rdf:type rdf:resource="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Country"/>
+        <witcher_3_ontology:PlacedAt rdf:resource="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Север"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Север -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Север">
+        <rdf:type rdf:resource="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Location"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Талер -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Талер">
+        <rdf:type rdf:resource="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Human"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Spy"/>
+        <witcher_3_ontology:LiveIn rdf:resource="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Темерия"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Темерия -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Темерия">
+        <rdf:type rdf:resource="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Country"/>
+        <witcher_3_ontology:PlacedAt rdf:resource="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Север"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Трисс_Меригольд -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Трисс_Меригольд">
+        <rdf:type rdf:resource="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Enchantress"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Human"/>
+        <witcher_3_ontology:LiveIn rdf:resource="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Темерия"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Филиппа_Эйльхарт -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Филиппа_Эйльхарт">
+        <rdf:type rdf:resource="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Enchantress"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Human"/>
+        <witcher_3_ontology:LiveIn rdf:resource="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Редания"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Фольтест -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Фольтест">
+        <rdf:type rdf:resource="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Human"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#King"/>
+        <witcher_3_ontology:LiveIn rdf:resource="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Темерия"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Фрингилья_Виго -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Фрингилья_Виго">
+        <rdf:type rdf:resource="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Enchantress"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Human"/>
+        <witcher_3_ontology:LiveIn rdf:resource="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Нильфгаард"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Эмгыр_вар_Емрейс -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Эмгыр_вар_Емрейс">
+        <rdf:type rdf:resource="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Human"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Imperor"/>
+        <witcher_3_ontology:LiveIn rdf:resource="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Нильфгаард"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Эскель -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Эскель">
+        <rdf:type rdf:resource="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Witcher"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Юг -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Юг">
+        <rdf:type rdf:resource="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Location"/>
+        <witcher_3_ontology:SideForCountry rdf:resource="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Нильфгаард"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Rules
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology/x">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology/y">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology/p1">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology/c1">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology/p2">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology/c2">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology/side">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology/z">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>canBeInNovigrad</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Default"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology/x"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#CanBeIn"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology/x"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Новиград"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>subject_</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Compatriots"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology/x"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology/y"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Leader"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology/y"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Subject"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology/x"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology/y"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>allies_</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Witcher"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology/x"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Witcher"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology/y"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Allies"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology/x"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology/y"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>fromOneSideOfTheContinent</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#LiveIn"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology/p1"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology/c1"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#LiveIn"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology/p2"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology/c2"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#PlacedAt"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology/c1"/>
+                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology/side"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#PlacedAt"/>
+                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology/c2"/>
+                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology/side"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#FromOneSideOfTheContinent"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology/p1"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology/p2"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>compatriots_</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#LiveIn"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology/x"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology/z"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#LiveIn"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology/y"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology/z"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Compatriots"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology/x"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology/y"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>lovers_</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Enchantress"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology/x"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#lovers"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology/x"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/honor/ontologies/2023/8/witcher_3_ontology#Геральт_из_Ривии"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi -->
+
